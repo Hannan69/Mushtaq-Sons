@@ -1,0 +1,89 @@
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a3c);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  margin: 0 auto;
+  grid-auto-rows: min-content; /* Ensure uniform rows */
+}
+
+/* Handle the last card placement */
+.mission-card:nth-child(4) {
+  grid-column: span 3; /* Make the card span all columns */
+  justify-self: center; /* Center the card horizontally */
+}
+
+.mission-card {
+  background: #2c2c3e;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.mission-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #4fc3f7;
+  font-weight: bold;
+}
+
+.mission-card p {
+  font-size: 1rem;
+  color: #c7c7d5;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 30px;
+  }
+
+  .mission-card:nth-child(4) {
+    grid-column: auto; /* Reset column span for smaller screens */
+  }
+
+  .mission-card {
+    padding: 15px;
+  }
+
+  .mission-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .mission-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-grid {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+    padding: 20px;
+  }
+
+  .mission-card {
+    padding: 10px;
+  }
+
+  .mission-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .mission-card p {
+    font-size: 0.85rem;
+  }
+}

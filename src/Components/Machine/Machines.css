@@ -1,0 +1,85 @@
+.machines-container {
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .machines-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Machine Card Styles */
+  .machine-card {
+    background: linear-gradient(145deg, #ffffff, #e4e6eb);
+    margin-bottom: 25px;
+    border-radius: 12px;
+    padding: 25px 20px;
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .machine-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2), 0 6px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .machine-name {
+    color: #34495e;
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  .machine-description {
+    color: #7f8c8d;
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .machines-container {
+      padding: 20px;
+    }
+  
+    .machines-title {
+      font-size: 2em;
+    }
+  
+    .machine-card {
+      padding: 20px 15px;
+    }
+  
+    .machine-name {
+      font-size: 1.5em;
+    }
+  
+    .machine-description {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .machines-title {
+      font-size: 1.8em;
+    }
+  
+    .machine-name {
+      font-size: 1.3em;
+    }
+  
+    .machine-description {
+      font-size: 0.95em;
+    }
+  }

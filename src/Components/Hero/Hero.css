@@ -1,0 +1,73 @@
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures video stays behind the text */
+    pointer-events: none; /* Prevents interaction with the video */
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity and color as needed */
+    z-index: 0; /* Ensures the overlay stays above the video */
+  }
+  
+  .hero-text {
+    text-align: center;
+    max-width: 800px;
+    z-index: 1; /* Ensures text stays above the overlay */
+  }
+  
+  .hero-text h1 {
+    font-size: 50px;
+    font-weight: 600;
+  }
+  
+  .hero-text p {
+    max-width: 700px;
+    margin: 10px auto 20px;
+    line-height: 1.4;
+  }
+  
+  @media (max-width: 850px) {
+    .hero-text h1 {
+      font-size: 25px;
+      max-width: 400px;
+      margin: auto;
+    }
+    .hero-text p {
+      font-size: 14px;
+      margin: 15px auto 30px;
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .hero-text h1 {
+      font-size: 20px;
+      max-width: 400px;
+      margin: auto;
+    }
+    .hero-text p {
+      font-size: 14px;
+      margin: 15px auto 30px;
+    }
+  }
+  
