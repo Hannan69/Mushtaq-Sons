@@ -14,7 +14,7 @@ const Contact = () => {
       setResult("Sending....");
       const formData = new FormData(event.target);
   
-      formData.append("access_key", "51026337-c75d-4bef-a055-6ec3a5af963c");
+      formData.append("access_key", "ACCESS KEY");
   
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -58,7 +58,7 @@ const Contact = () => {
                         scrolling="no"
                         marginHeight="0"
                         marginWidth="0"
-                        src="https://www.google.com/maps/embed/v1/place?q=Mushtaq+%26+Sons,+Suite%2309,+opposite+New+Shahid+Sports,+Block+2+Nazimabad,+Karachi,+Karachi+City,+Sindh+74600&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                        src="https://www.google.com/maps/embed/v1/place?q=Mushtaq+%26+Sons,+Suite%2309,+opposite+New+Shahid+Sports,+Block+2+Nazimabad,+Karachi,+Karachi+City,+Sindh+74600&key=GOOGLEMAPSKEY"
                     ></iframe>
                 </div>
             </div>
